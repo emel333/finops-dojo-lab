@@ -19,6 +19,7 @@ This dataset should be treated as a stand-in for cloud billing and usage records
 In this case, the dataset may be uploaded to or connected through the AWS environment created by the provided Terraform v1 configuration, and then queried or analyzed through tools such as Athena, Python notebooks, SQL workflows, CloudWatch dashboards, or equivalent analytical views.
 
 
+
 ## Primary dataset
 
 Main file:
@@ -37,7 +38,10 @@ The primary dataset is designed to be flexible enough for both:
 - and deployment into an AWS-based learning environment for querying, visualization, and reporting.
 
 
+
+
 ## Column definitions
+
 
 ### Time and account fields
 
@@ -47,6 +51,8 @@ The primary dataset is designed to be flexible enough for both:
 - `account_name` — Human-readable account label
 - `business_unit` — Business unit or portfolio grouping
 - `region` — AWS region
+
+
 
 ### Cost and service fields
 
@@ -62,6 +68,8 @@ The primary dataset is designed to be flexible enough for both:
 - `discount_type` — Pricing/discount category
 - `commitment_eligible` — Whether usage may be relevant for commitment analysis
 
+
+
 ### Environment and ownership fields
 
 - `environment` — dev, staging, prod, or shared
@@ -72,6 +80,8 @@ The primary dataset is designed to be flexible enough for both:
 - `owner` — Named owner where available
 - `is_tagged` — Whether the row meets required tagging criteria
 - `allocation_confidence` — Confidence level for assigning cost to a responsible group
+
+
 
 ### AI and workload fields
 
@@ -84,6 +94,8 @@ The primary dataset is designed to be flexible enough for both:
 - `latency_band` — Latency bucket
 - `quality_tier` — Quality expectation tier
 
+
+
 ### Business context fields
 
 - `monthly_revenue_proxy` — Approximate revenue associated with the relevant business area
@@ -95,12 +107,17 @@ The primary dataset is designed to be flexible enough for both:
 - `forecast_baseline_cost` — Baseline forecasted cost for the relevant scope or period
 - `acquisition_phase` — Business context marker such as pre-acquisition, integration, or post-acquisition
 
+
+
 ### Diagnostic support fields
 
 - `anomaly_flag` — Indicator that usage or spend may be unusual
 - `waste_flag` — Indicator that a row may reflect inefficient or unnecessary usage
 - `political_sensitivity` — Relative sensitivity of the associated recommendation
 - `notes` — Optional free-text context
+
+
+
 
 
 ## Deployment and analysis context
@@ -113,6 +130,7 @@ Depending on the case implementation, the learner may:
 - and create visual summaries in CloudWatch or another analytical tool.
 
 The exact implementation may vary by case iteration, but the schema is intended to support both infrastructure-based and notebook-based analysis workflows.
+
 
 
 
@@ -132,6 +150,9 @@ The schema is intended to support analysis such as:
 - potential optimization opportunities
 - prioritization of actions under uncertainty
 - pre- and post-acquisition financial interpretation
+
+
+
 
 ## Working guidance
 

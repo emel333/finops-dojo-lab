@@ -20,6 +20,8 @@ Your job is to help leadership answer a practical question:
 
 **How should ClarionFlow AI improve cloud cost visibility, operating discipline, and AWS efficiency over the next 100 days while preserving business momentum?**
 
+
+
 ## Business Situation
 
 Leadership has identified several concerns:
@@ -37,6 +39,8 @@ The company needs:
 - and an operating cadence for ongoing FinOps work.
 
 
+
+
 ## Stakeholders
 
 You should assume the case involves the following stakeholder perspectives:
@@ -48,6 +52,9 @@ You should assume the case involves the following stakeholder perspectives:
 - **Engineering Managers** — want recommendations that are practical and technically credible.
 - **Sales / Customer-facing leadership** — want cost actions that do not harm important customer relationships.
 
+
+
+
 ## Your Objectives
 
 Your deliverables should help the company:
@@ -58,6 +65,9 @@ Your deliverables should help the company:
 4. Recommend a 30/60/90-day action plan.
 5. Define a realistic ongoing FinOps operating cadence.
 6. Develop an initial view of unit economics, forecastability, and financial risks relevant to CFO and post-acquisition decision-making.
+
+
+
 
 ## Materials You Will Use
 
@@ -74,6 +84,9 @@ The dataset is designed to support realistic FinOps analysis and should be treat
 
 The Terraform v1 configuration is provided so you can stand up the initial environment, load or connect the dataset, and then treat that environment as the inherited baseline for the rest of the case.
 
+
+
+
 ## Required Deliverables
 
 Produce the following:
@@ -87,6 +100,9 @@ Produce the following:
 - A proposed weekly and monthly FinOps operating cadence
 - A CloudWatch dashboard or equivalent visibility layer for key metrics, trends, and findings
 
+
+
+
 ## Working Assumptions
 
 As you work the case, make your assumptions explicit.
@@ -98,6 +114,9 @@ Where data is incomplete or ambiguous:
 
 Your job is not only to identify cost issues, but to demonstrate sound practitioner judgment under realistic business conditions.
 
+
+
+
 ## Guiding Questions
 
 As you work the case, consider:
@@ -108,6 +127,7 @@ As you work the case, consider:
 - What actions would be safe and high-confidence in the first 30 days?
 - What actions require more validation, stakeholder buy-in, or architectural review?
 - What operating rhythm would help the company improve continuously rather than react occasionally?
+
 
 
 
