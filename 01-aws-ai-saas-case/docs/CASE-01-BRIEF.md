@@ -57,16 +57,22 @@ Your deliverables should help the company:
 3. Separate technical issues from process and governance issues.
 4. Recommend a 30/60/90-day action plan.
 5. Define a realistic ongoing FinOps operating cadence.
+6. Develop an initial view of unit economics, forecastability, and financial risks relevant to CFO and post-acquisition decision-making.
 
 ## Materials You Will Use
 
 You will work from:
+
 - a synthetic AWS cost and usage dataset,
+- a provided Terraform v1 configuration for the baseline AWS environment,
 - a simplified AWS architecture scope,
-- your own analysis in Python / notebooks,
+- your own analysis in Python / notebooks / SQL,
+- CloudWatch dashboards or equivalent analytical views,
 - and supporting documentation in the repo.
 
 The dataset is designed to support realistic FinOps analysis and should be treated as a stand-in for cloud billing and usage records.
+
+The Terraform v1 configuration is provided so you can stand up the initial environment, load or connect the dataset, and then treat that environment as the inherited baseline for the rest of the case.
 
 ## Required Deliverables
 
@@ -76,8 +82,10 @@ Produce the following:
 - A view of spending by major dimension (such as service, environment, team, or product)
 - A list of prioritized optimization opportunities
 - A 30/60/90-day action plan
-- A short executive memo or summary
+- A detailed analyst report (`CASE-01-REPORT.md`)
+- A short executive brief or presentation (`CASE-01-EXECUTIVE-BRIEF.md` or slides)
 - A proposed weekly and monthly FinOps operating cadence
+- A CloudWatch dashboard or equivalent visibility layer for key metrics, trends, and findings
 
 ## Working Assumptions
 
