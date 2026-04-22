@@ -3,34 +3,37 @@
 
 ## Context
 
-ClarionFlow AI is a mid-market B2B SaaS company that provides AI-assisted workflow automation for operations teams. 
+ClarionFlow AI is a mid-market B2B SaaS company that provides AI-assisted workflow automation for operations teams.
 
-The platform has expanded its AI-enabled features over the past 12 months and has seen growth in customer usage, product complexity, and cloud spend.
+Over the past 12 months, ClarionFlow AI has expanded its AI-enabled features and acquired a separate AI platform that now runs alongside its legacy core product and shared services (represented in the data as acquired-ai-platform, legacy-core-prod, and shared-services). As a result, customer usage, product complexity, and AWS spend have all increased.
 
-The company has recently been acquired.
-
-During the first 100 days, leadership wants a clear understanding of AWS cost drivers, areas of operational inefficiency, and the actions required to improve financial discipline without undermining growth or product delivery.
+ClarionFlow AI is owned by a private equity–backed operator, which has brought you in during the first 100 days after the AI platform acquisition to run a focused FinOps and architecture assessment. Leadership wants a clear understanding of AWS cost drivers across the acquired AI platform and existing workloads, and the actions required to improve financial discipline without undermining growth or product delivery.
 
 
 ## Your Role
 
-You are acting as an interim FinOps practitioner embedded in the business during the post-acquisition period.
+You are acting as an interim FinOps practitioner engaged by the private equity–backed owner of ClarionFlow AI and embedded with the ClarionFlow team during the post-acquisition period.
 
-Your job is to help leadership answer a practical question:
+Your job is to help ownership and ClarionFlow leadership answer a practical question:
 
-**How should ClarionFlow AI improve cloud cost visibility, operating discipline, and AWS efficiency over the next 100 days while preserving business momentum?**
+How should ClarionFlow AI improve cloud cost visibility, operating discipline, and AWS efficiency across the acquired AI platform, legacy core product, and shared services over the next 100 days, while keeping spend aligned with its highest‑value growth bets and preserving business momentum?
 
 
 
 ## Business Situation
 
+ClarionFlow AI has recently acquired an AI platform that is now integrated into its environment. The PE-backed owner wants a disciplined post-acquisition view of cloud and AI spend, and a practical plan for improving financial discipline without damaging growth or product delivery.
+
+
 Leadership has identified several concerns:
 - AWS spend has risen quickly over the past year.
-- New AI-related features appear to be changing cost patterns.
+- New AI-related features and the acquired AI platform appear to be changing cost patterns.
 - Finance lacks confidence in current cost visibility and allocation.
 - Engineering has focused primarily on speed, uptime, and delivery.
 - Shared services and environments may not be consistently governed.
 - Leadership wants actionable recommendations, not just reporting.
+- The PE owner expects a clear 30/60/90-day view of actions, risks, and upside that can be used directly in board and investment discussions.
+
 
 The company needs:
 - clearer spend visibility,
@@ -59,12 +62,17 @@ You should assume the case involves the following stakeholder perspectives:
 
 Your deliverables should help the company:
 
-1. Understand the current AWS cost structure.
-2. Identify likely areas of inefficiency, waste, or poor allocation.
-3. Separate technical issues from process and governance issues.
-4. Recommend a 30/60/90-day action plan.
-5. Define a realistic ongoing FinOps operating cadence.
-6. Develop an initial view of unit economics, forecastability, and financial risks relevant to CFO and post-acquisition decision-making.
+- Understand the current AWS cost structure in business terms (products, customers, accounts such as acquired-ai-platform, legacy-core-prod, and shared-services).
+
+- Identify likely areas of inefficiency, waste, or poor allocation that are not advancing key business objectives or the PE owner’s value-creation plan.
+
+- Separate technical issues from process and governance issues so leadership knows where to invest attention.
+
+- Recommend a 30/60/90-day action plan that a PE/search-fund owner and ClarionFlow’s operator-CEOs can realistically execute with existing teams.
+
+- Define a realistic ongoing FinOps operating cadence.
+
+- Develop an initial view of unit economics, forecastability, and financial risks relevant to the CFO, PE/search-fund owner, and post-acquisition decision-making (for example, which workloads and AI features are most worth further investment).
 
 
 
@@ -96,7 +104,7 @@ Produce the following:
 - A list of prioritized optimization opportunities
 - A 30/60/90-day action plan
 - A detailed analyst report (`CASE-01-REPORT.md`)
-- A short executive brief or presentation (`CASE-01-EXECUTIVE-BRIEF.md` or slides)
+- A short executive brief or presentation
 - A proposed weekly and monthly FinOps operating cadence
 - A CloudWatch dashboard or equivalent visibility layer for key metrics, trends, and findings
 
