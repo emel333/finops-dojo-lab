@@ -20,13 +20,25 @@ variable "notification_emails" {
   description = "Email addresses for budget alerts"
   type        = list(string)
   default = [
-    "finops@clarionflow.example.com",
-    "cfo@clarionflow.example.com"
+    "z3@fastmail.com"
   ]
 }
 
 variable "monthly_budget_limit_usd" {
   description = "Default monthly budget limit applied to each logical account budget"
   type        = number
-  default     = 5000
+  default     = 100
+}
+
+variable "aws_profile" {
+  description = "Named AWS CLI profile for this FinOps dojo environment"
+  type        = string
+  default     = "finops-dojo"
+}
+
+variable "db_username" {
+  description = "Master username for the ClarionFlow PostgreSQL instance"
+  type        = string
+  default     = "appuser"
+  sensitive   = true
 }

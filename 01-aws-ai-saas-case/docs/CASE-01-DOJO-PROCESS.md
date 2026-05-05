@@ -26,7 +26,7 @@ You will run these steps in a loop:
 7. Review & Explain – Tech, cost, finance story, and reporting  
 8. Iterate – New baseline, new loop
 
-Think of it as an infinity symbol: left side = understand & inform, right side = decide & change. [web:578][web:584]
+Think of it as an infinity symbol: left side = understand & inform, right side = decide & change.
 
 ---
 
@@ -43,7 +43,7 @@ From `CASE-01-BRIEF.md` and any other artifacts:
 - Note explicit constraints, such as:
   - Cost targets, SLAs, compliance, timelines.
 - If the case mentions acquisition/exit:
-  - Note what an **acquirer** would likely care about (cloud as % of revenue, cost predictability, unit economics, integration risk). [web:601][web:603][web:607]
+  - Note what an **acquirer** would likely care about (cloud as % of revenue, cost predictability, unit economics, integration risk).
 
 Capture this in a short note (notebook or `notes/`).
 
@@ -58,7 +58,7 @@ Goal: Treat the **initial environment** as inherited, like a real FinOps lead wo
 - Open the **provided Terraform files** for the chosen baseline architecture for Case 01.
 - Understand, at a high level:
   - What resources and modules are defined?
-  - Which services are likely to drive cost (compute, storage, databases, networking, observability)? [web:575][web:576]
+  - Which services are likely to drive cost (compute, storage, databases, networking, observability)?
 - Use these files to **stand up the v1 environment**:
   - Run `terraform init`, `terraform plan`, and `terraform apply` in the `terraform/` directory.
   - Verify the environment matches expectations from the brief (environments, region, main components).
@@ -67,7 +67,7 @@ Goal: Treat the **initial environment** as inherited, like a real FinOps lead wo
 
 - Locate the **synthetic cost/usage dataset** provided for this case.
 - Understand:
-  - Where and how it will live in AWS (e.g., S3 bucket, Glue catalog + Athena, or RDS). [web:577][web:580]
+  - Where and how it will live in AWS (e.g., S3 bucket, Glue catalog + Athena, or RDS).
 - Use Terraform and/or simple scripts to:
   - Upload or connect the dataset to the environment (e.g., put objects in S3, define a Glue table, set up an Athena workgroup).
 - Confirm you can query or read the dataset (e.g., basic Athena query or Python read).
@@ -86,16 +86,16 @@ Using the synthetic cost/billing dataset (and any usage metrics):
   - Python (Pandas), SQL (Athena/RDS), or a notebook.
 - Clean and normalize:
   - Ensure key fields (service, account, region, tags, environment) are usable.
-  - Fix or flag missing/inconsistent tags where necessary. [web:576][web:577]
+  - Fix or flag missing/inconsistent tags where necessary. 
 - Analyze:
   - Top N services by cost.
   - Cost by environment, account, or tag (product/tenant/team).
   - Trends over time (month-by-month or week-by-week).
-  - Any anomalies or spikes. [web:578][web:579]
+  - Any anomalies or spikes.
 - Build **unit economics and financial views**:
   - Cost per tenant / customer / order / API call, as appropriate.
   - Cloud cost as % of revenue in this scenario (if revenue is modeled).
-  - Identify obvious waste or underutilization. [web:589][web:591][web:609]
+  - Identify obvious waste or underutilization.
 
 Capture key findings as bullet points; you’ll use them in Step 4.
 
@@ -112,7 +112,7 @@ Based on Steps 1–3:
   - Storage optimizations (classes, lifecycle rules).
   - Scheduling/off-hours shutdown for non-prod.
   - Improving tagging/allocation for better showback/chargeback.
-  - Reducing volatility and improving forecastability. [web:578][web:579][web:608]
+  - Reducing volatility and improving forecastability.
 - Decide what to target **this iteration**, considering:
   - Business goals (growth vs margin vs reliability).
   - Pre/post-acquisition concerns (e.g., making cost structure more attractive and predictable).
@@ -123,7 +123,7 @@ Record each decision in a **Decision Log** entry:
 - Options considered (including any AI suggestions).
 - Chosen direction.
 - Technical reasoning (performance, reliability).
-- Financial reasoning (unit economics, COGS, predictability). [web:589][web:593]
+- Financial reasoning (unit economics, COGS, predictability).
 
 This is a thinking step—no code changes yet.
 
@@ -137,7 +137,7 @@ For each chosen opportunity:
 
 - Decide how the design should change:
   - Architecture adjustments (e.g., switching storage classes, tightening autoscaling, separating environments).
-  - Tagging and account structure improvements that support better allocation. [web:575][web:576]
+  - Tagging and account structure improvements that support better allocation.
 - Map these to Terraform:
   - What modules/resources need to change?
   - What new variables, locals, or outputs do you need?
@@ -146,7 +146,7 @@ For each chosen opportunity:
   - Expected change to:
     - total monthly spend,
     - unit economics (cost per tenant/customer/order/API),
-    - volatility and forecast error. [web:578][web:608][web:611]
+    - volatility and forecast error.
 
 Sketch a before/after view in both architecture and Terraform terms.
 
@@ -165,7 +165,7 @@ Goal: **Encode your decisions as “FinOps as code”** and make them visible.
   - Create or update at least one CloudWatch dashboard and/or equivalent view to visualize:
     - key usage metrics,
     - key cost drivers or proxies (if applicable),
-    - any indicators tied to your optimizations. [web:604][web:605]
+    - any indicators tied to your optimizations.
   - Optionally, complement this with notebook/BI charts for cost/unit metrics.
 
 After this step, the environment should reflect your FinOps decisions in both infrastructure and observability.
@@ -180,20 +180,20 @@ Goal: Evaluate impact and be able to **tell the story** clearly to technical and
 
 - Re-run your cost/usage analysis:
   - Did the expected cost drivers move in the direction you wanted?
-  - Any new anomalies or regressions? [web:578][web:587]
+  - Any new anomalies or regressions?
 - Review Terraform:
   - Is the structure clear and safe (no surprise destroys, no unnecessary complexity)?
-  - Any new security risks (e.g., public exposure, overly broad IAM)? [web:575][web:576]
+  - Any new security risks (e.g., public exposure, overly broad IAM)?
 
 ### 7.2 Financial acumen check
 
 - Evaluate impact on:
   - Unit economics (cost per tenant/customer/order/API).
   - Volatility (did spend become more or less predictable?).
-  - Alignment with business and CFO concerns (e.g., margin, predictability, readiness for acquisition). [web:589][web:601][web:603][web:611]
+  - Alignment with business and CFO concerns (e.g., margin, predictability, readiness for acquisition).
 - Consider forecastability:
   - Would forecasting next month’s cloud cost be easier now?
-  - If you have a simple forecast model, compare expected vs “actual” in the dataset. [web:608]
+  - If you have a simple forecast model, compare expected vs “actual” in the dataset.
 
 ### 7.3 Explain it (closed-file recall & defense)
 
@@ -202,7 +202,7 @@ Without code in front of you, practice explaining:
 - What you changed and why (in Terraform and architecture terms).
 - How those changes impacted cost and unit economics.
 - What the CFO/finance team would care about in these results.
-- How you would summarize findings to a CTO or platform lead. [web:589][web:593][web:609]
+- How you would summarize findings to a CTO or platform lead.
 
 ### 7.4 Produce reports
 
@@ -212,14 +212,14 @@ Create two artifacts:
    - Executive summary.
    - Key cost drivers and unit metrics.
    - Description of changes made and their technical/financial impact.
-   - Risks, tradeoffs, and recommended next steps. [web:589][web:592]
+   - Risks, tradeoffs, and recommended next steps.
 
 2. `CASE-01-EXECUTIVE-BRIEF.md` (or slides)
    - 1–2 page narrative or 5–7 slides aimed at executives.
    - Focus on:
      - What’s happening with cloud cost.
      - Why it matters to the business/financials.
-     - What actions you recommend and expected impact. [web:604][web:611]
+     - What actions you recommend and expected impact.
 
 ---
 

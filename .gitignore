@@ -42,3 +42,6 @@ override.tf.json
 # CLI config
 .terraformrc
 terraform.rc
+
+#added TF lock
+.terraform.lock.hcl
